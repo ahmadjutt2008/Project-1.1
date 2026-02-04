@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Demo Auto Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <header id="shared-header"></header>
+
+    <main style="padding-top: 150px; padding-bottom: 80px;">
+        <div class="container" style="max-width: 900px;">
+            <span class="demo-badge">LEGAL NOTICE</span>
+            <h1 style="margin-bottom: 40px;">Privacy Policy</h1>
+
+            <div style="color: var(--text-secondary); line-height: 1.8;">
+                <p style="margin-bottom: 30px; font-weight: 600; color: var(--accent-color);">IMPORTANT: This is a demo
+                    privacy policy for presentation purposes only.</p>
+
+                <h3 style="color: white; margin-bottom: 15px;">1. Information We Collect</h3>
+                <p style="margin-bottom: 25px;">On this demo site, any information entered into forms (Name, Email,
+                    etc.) is NOT stored or transmitted to any real server or database.</p>
+
+                <h3 style="color: white; margin-bottom: 15px;">2. How We Use Information</h3>
+                <p style="margin-bottom: 25px;">In a real automotive dealership platform, your information would be used
+                    to process vehicle inquiries, service bookings, and financial applications.</p>
+
+                <h3 style="color: white; margin-bottom: 15px;">3. Cookies</h3>
+                <p style="margin-bottom: 25px;">We use demo cookies to enhance your browsing experience on this
+                    prototype. No real tracking is performed.</p>
+
+                <h3 style="color: white; margin-bottom: 15px;">4. Third-Party Sharing</h3>
+                <p style="margin-bottom: 25px;">We do not share your demo data with any third parties.</p>
+
+                <p style="margin-top: 50px; border-top: 1px solid var(--glass-border); padding-top: 30px;">Last Updated:
+                    February
+                    2026 (Demo Version)</p>
+            </div>
+        </div>
+    </main>
+
+    <footer id="shared-footer"></footer>
+
+    <script type="module" src="/main.js"></script>
+    <script>
+        fetch('index.html').then(res => res.text()).then(html => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            document.getElementById('shared-header').innerHTML = doc.querySelector('header').innerHTML;
+            document.getElementById('shared-footer').innerHTML = doc.querySelector('footer').innerHTML;
+            setTimeout(() => {
+                const mobileToggle = document.querySelector('.mobile-toggle');
+                const navLinks = document.querySelector('.nav-links');
+                if (mobileToggle) mobileToggle.onclick = () => navLinks.classList.toggle('active');
+            }, 100);
+        });
+    </script>
+</body>
+
+</html>
