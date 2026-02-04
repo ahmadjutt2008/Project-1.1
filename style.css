@@ -318,3 +318,9 @@ footer {
 .nav-links a.active::after {
   width: 100%;
 }
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    height: calc(100vh - 250px) !important;
+  }
+}
