@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Demo Auto Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <header id="shared-header"></header>
+
+    <main class="page-main" style="padding-bottom: 80px;">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <span class="demo-badge">GET IN TOUCH</span>
+                <h1 class="page-title">Contact Demo Hub</h1>
+                <p style="color: var(--text-secondary);">We are here to assist you with any inquiries or service needs.
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Info -->
+                <div>
+                    <div class="glass-card" style="margin-bottom: 30px;">
+                        <h3 style="margin-bottom: 25px;">Contact Information</h3>
+                        <div style="margin-bottom: 20px; display: flex; gap: 15px;">
+                            <i class="fas fa-map-marker-alt" style="color: var(--accent-color); font-size: 1.2rem;"></i>
+                            <div>
+                                <h4 style="margin: 0;">Our Address</h4>
+                                <p style="color: var(--text-secondary); margin: 5px 0 0;">123 Demo Avenue, Suite 100,
+                                    Tech City, TC 54321</p>
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 20px; display: flex; gap: 15px;">
+                            <i class="fas fa-phone" style="color: var(--accent-color); font-size: 1.2rem;"></i>
+                            <div>
+                                <h4 style="margin: 0;">Phone Number</h4>
+                                <p style="color: var(--text-secondary); margin: 5px 0 0;">+1 (234) 567-890</p>
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 20px; display: flex; gap: 15px;">
+                            <i class="fas fa-envelope" style="color: var(--accent-color); font-size: 1.2rem;"></i>
+                            <div>
+                                <h4 style="margin: 0;">Email Address</h4>
+                                <p style="color: var(--text-secondary); margin: 5px 0 0;">hello@demoautohub.com</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 15px;">
+                            <i class="fas fa-clock" style="color: var(--accent-color); font-size: 1.2rem;"></i>
+                            <div>
+                                <h4 style="margin: 0;">Opening Hours</h4>
+                                <p style="color: var(--text-secondary); margin: 5px 0 0;">Mon - Sat: 9:00 AM - 7:00 PM
+                                </p>
+                                <p style="color: var(--text-secondary); margin: 5px 0 0;">Sun: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/1234567890" target="_blank" class="btn"
+                        style="width: 100%; background: #25D366; color: white; text-align: center; border: none; font-size: 1rem;">
+                        <i class="fab fa-whatsapp"></i> Chat with Sales (Demo)
+                    </a>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="glass-card">
+                    <form id="contact-form">
+                        <div class="form-row">
+                            <input type="text" placeholder="Your Name" required
+                                style="width: 100%; padding: 15px; background: var(--bg-color); border: 1px solid var(--glass-border); color: white; border-radius: 4px;">
+                            <input type="email" placeholder="Your Email" required
+                                style="width: 100%; padding: 15px; background: var(--bg-color); border: 1px solid var(--glass-border); color: white; border-radius: 4px;">
+                        </div>
+                        <div style="margin-bottom: 20px;">
+                            <input type="text" placeholder="Subject"
+                                style="width: 100%; padding: 15px; background: var(--bg-color); border: 1px solid var(--glass-border); color: white; border-radius: 4px;">
+                        </div>
+                        <div style="margin-bottom: 25px;">
+                            <textarea placeholder="Your Message" rows="6" required
+                                style="width: 100%; padding: 15px; background: var(--bg-color); border: 1px solid var(--glass-border); color: white; border-radius: 4px; resize: none;"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message Preview</button>
+                    </form>
+                    <div id="contact-success" style="display: none; text-align: center; padding: 30px;">
+                        <i class="fas fa-paper-plane"
+                            style="font-size: 3rem; color: var(--accent-color); margin-bottom: 20px;"></i>
+                        <h3>Message Sent!</h3>
+                        <p style="color: var(--text-secondary);">Thank you for reaching out. This is a demo interaction.
+                        </p>
+                        <button class="btn btn-outline" style="margin-top: 20px;"
+                            onclick="location.reload()">Reset</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Placeholder -->
+            <div class="map-container">
+                <div style="text-align: center; z-index: 1;">
+                    <i class="fas fa-map-marked-alt"
+                        style="font-size: 4rem; color: var(--accent-color); margin-bottom: 20px;"></i>
+                    <h2>Interactive Map Placeholder</h2>
+                    <p style="color: var(--text-secondary);">In a production site, a live Google Map would be embedded
+                        here.</p>
+                </div>
+                <div
+                    style="position: absolute; inset: 0; opacity: 0.1; background: url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1200&q=80') center/cover;">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="shared-footer"></footer>
+
+    <script type="module" src="/main.js"></script>
+    <script>
+        document.getElementById('contact-form').onsubmit = (e) => {
+            e.preventDefault();
+            document.getElementById('contact-form').style.display = 'none';
+            document.getElementById('contact-success').style.display = 'block';
+        };
+
+        fetch('index.html').then(res => res.text()).then(html => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            document.getElementById('shared-header').innerHTML = doc.querySelector('header').innerHTML;
+            document.getElementById('shared-footer').innerHTML = doc.querySelector('footer').innerHTML;
+            setTimeout(() => {
+                const mobileToggle = document.querySelector('.mobile-toggle');
+                const navLinks = document.querySelector('.nav-links');
+                if (mobileToggle) mobileToggle.onclick = () => navLinks.classList.toggle('active');
+            }, 100);
+        });
+    </script>
+</body>
+
+</html>
