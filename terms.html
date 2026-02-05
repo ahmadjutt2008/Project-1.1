@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions | Demo Auto Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <header id="shared-header"></header>
+
+    <main style="padding-top: 150px; padding-bottom: 80px;">
+        <div class="container" style="max-width: 900px;">
+            <span class="demo-badge">LEGAL NOTICE</span>
+            <h1 style="margin-bottom: 40px;">Terms & Conditions</h1>
+
+            <div style="color: var(--text-secondary); line-height: 1.8;">
+                <p style="margin-bottom: 30px; font-weight: 600; color: var(--accent-color);">NOTICE: This website is a
+                    functional prototype for client demonstration purposes only.</p>
+
+                <h3 style="color: white; margin-bottom: 15px;">1. Usage Agreement</h3>
+                <p style="margin-bottom: 25px;">By browsing this demo, you acknowledge that no real products are for
+                    sale and no real services are being offered.</p>
+
+                <h3 style="color: white; margin-bottom: 15px;">2. Vehicle Pricing</h3>
+                <p style="margin-bottom: 25px;">All prices shown are for illustrative purposes only and do not represent
+                    actual market values or offers.</p>
+
+                <h3 style="color: white; margin-bottom: 15px;">3. Service Bookings</h3>
+                <p style="margin-bottom: 25px;">Forms submitted on this site are for UI/UX demonstration and will not
+                    result in actual service appointments.</p>
+
+                <h3 style="color: white; margin-bottom: 15px;">4. Intellectual Property</h3>
+                <p style="margin-bottom: 25px;">This design concept and layout are the property of the presentation
+                    developer.</p>
+
+                <p style="margin-top: 50px; border-top: 1px solid var(--glass-border); padding-top: 30px;">Effective
+                    Date: February
+                    2026 (Demo Version)</p>
+            </div>
+        </div>
+    </main>
+
+    <footer id="shared-footer"></footer>
+
+    <script type="module" src="/main.js"></script>
+    <script>
+        fetch('index.html').then(res => res.text()).then(html => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            document.getElementById('shared-header').innerHTML = doc.querySelector('header').innerHTML;
+            document.getElementById('shared-footer').innerHTML = doc.querySelector('footer').innerHTML;
+            setTimeout(() => {
+                const mobileToggle = document.querySelector('.mobile-toggle');
+                const navLinks = document.querySelector('.nav-links');
+                if (mobileToggle) mobileToggle.onclick = () => navLinks.classList.toggle('active');
+            }, 100);
+        });
+    </script>
+</body>
+
+</html>
